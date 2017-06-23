@@ -1,3 +1,15 @@
+# Car controller  for wirebed
+
+fork from [car controoler](https://github.com/jabelone/car-controller)
+
+## How to use
+1. download wirebed tool from www.wirebed.com
+2. open the project car_controller_wirebed\car_controller_wirebed.wire
+3. waiting for wirebed auto install build tools.
+4. Select board/build.
+5. Select board/upload.
+
+
 # Car Controller
 This project provides firmware that runs on an arduino.  This firmware, coupled with an arduino, provides a serial (UART) interface for outputting PWM signals.  Something like a raspberry pi has lots of processing power and I/O; but it can't reliably drive PWM outputs for servos etc.  Due to the PWM being done in software, any slight lag will effect the precise timing required.
 
