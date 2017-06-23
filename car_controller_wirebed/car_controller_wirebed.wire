@@ -1,0 +1,222 @@
+<?xml version='1.0'?>
+<wirebed version="1.2" board="atmelavr;uno;ATMEGA328P;16000000;32256;2048;Arduino Uno;arduino,simba" author="Wirebed" type="" projectsetting="" framework="arduino" debug="1">
+  <wire nummooreout="3" transfontitalic="0" draw_it="0" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="wirebed" version="1.0" name="wire" arrowtype="4" numbits="3" statefontweight="50" statefont="Helvetica" numin="0" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="1" board="">
+    <outputnames_moore>s_out2,s_out1,s_out0</outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="468.8557305106663" endx="230.1592822744462" xpos="170.1592822744461" endy="468.8557305106663"/>
+    <state pencolor="0" exit_actions="" high="0" radius="40" description="" finalstate="1" entry_actions="" ypos="461.6666666666667" code="0" xpos="419.1666666666666" vartrace="0" linewidth="1">Arduino Setup Loop</state>
+    <state pencolor="0" exit_actions="" high="1" radius="40" description="" finalstate="1" entry_actions="" ypos="460" code="1" xpos="269.1666666666667" vartrace="1" linewidth="1">led blink</state>
+    <state pencolor="0" exit_actions="" high="0" radius="40" description="" finalstate="1" entry_actions="" ypos="469.1666666666667" code="2" xpos="609.1666666666666" vartrace="1" linewidth="1">Serial</state>
+    <state pencolor="0" exit_actions="" high="1" radius="40" description="" finalstate="1" entry_actions="" ypos="160" code="3" xpos="391" vartrace="1" linewidth="1">throttle</state>
+    <state pencolor="0" exit_actions="" high="0" radius="40" description="" finalstate="1" entry_actions="" ypos="383.3333333333334" code="4" xpos="820" vartrace="1" linewidth="1">bat voltage</state>
+    <state pencolor="0" exit_actions="" high="1" radius="40" description="" finalstate="1" entry_actions="" ypos="247" code="5" xpos="607" vartrace="1" linewidth="1">Mode</state>
+    <state pencolor="0" exit_actions="" high="1" radius="40" description="" finalstate="1" entry_actions="" ypos="140.8333333333333" code="6" xpos="793.3333333333334" vartrace="1" linewidth="1">steering</state>
+    <transition c1x="521.336463542931" c2y="278.7813359364445" c1y="357.5647973278707" description="" straight="1" type="0" ypos="436.348258719297" endx="391.4123492221136" xpos="586.2985207033398" endy="199.9978745450183" c2x="456.3744063825224">
+      <from>2</from>
+      <to>3</to>
+      <inputs>slotWrite</inputs>
+      <outputs>sigThrottle</outputs>
+    </transition>
+    <transition c1x="691.2271016057098" c2y="260.5233280816244" c1y="347.4016758178336" description="" straight="1" type="0" ypos="434.2800235540427" endx="816.2111789564362" xpos="628.7350629303465" endy="173.6449803454153" c2x="753.719140281073">
+      <from>2</from>
+      <to>6</to>
+      <inputs>slotWrite</inputs>
+      <outputs>sigSteering</outputs>
+    </transition>
+    <transition c1x="739.1656526580069" c2y="436.0097096047471" c1y="420.3513812967999" description="" straight="1" type="0" ypos="404.6930529888526" endx="645.1360702164985" xpos="786.1804438787611" endy="451.6680379126944" c2x="692.1508614372527">
+      <from>4</from>
+      <to>2</to>
+      <inputs>sloSend</inputs>
+      <outputs>sigSend</outputs>
+    </transition>
+    <transition c1x="511.452412771003" c2y="214.4442193521617" c1y="229.9852830381468" description="" straight="1" type="0" ypos="245.5263467241318" endx="400.3029285288684" xpos="567.0271548920705" endy="198.9031556661766" c2x="455.8776706499358">
+      <from>5</from>
+      <to>3</to>
+      <inputs>sloMotoRun</inputs>
+      <outputs>sigMotorRun</outputs>
+    </transition>
+    <transition c1x="530.794616861378" c2y="187.4265141855612" c1y="201.6781421183905" description="" straight="1" type="0" ypos="215.9297700512198" endx="428.7680072578312" xpos="581.8079216631513" endy="173.1748862527318" c2x="479.7813120596046">
+      <from>5</from>
+      <to>3</to>
+      <inputs>sloStop</inputs>
+      <outputs>sigStraightAndStop</outputs>
+    </transition>
+    <transition c1x="696.3667554125295" c2y="202.5288880552871" c1y="224.2646002044395" description="" straight="1" type="0" ypos="246.0003123535919" endx="795.1252545249388" xpos="646.9875058563249" endy="180.7931759061347" c2x="745.7460049687342">
+      <from>5</from>
+      <to>6</to>
+      <inputs>sloMotoRun</inputs>
+      <outputs>sigMotorRun</outputs>
+    </transition>
+    <transition c1x="601.4456342495292" c2y="381.636776076429" c1y="333.9497911138989" description="" straight="1" type="0" ypos="286.2628061513686" endx="605.6250750553149" xpos="599.3559138466363" endy="429.3237610389592" c2x="603.535354652422">
+      <from>5</from>
+      <to>2</to>
+      <inputs>sloSend</inputs>
+      <outputs>sigSend</outputs>
+    </transition>
+    <transition c1x="670.7848508757852" c2y="169.8984966497172" c1y="191.8082424381017" description="" straight="1" type="0" ypos="213.7179882264863" endx="753.9785369293371" xpos="629.1880078490092" endy="147.9887508613327" c2x="712.3816939025611">
+      <from>5</from>
+      <to>6</to>
+      <inputs>sloStop</inputs>
+      <outputs>sigStraightAndStop</outputs>
+    </transition>
+    <block block="&#xd;&#xa;"/>
+  </wire>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="1" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out0</outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="152" endx="328" xpos="268" endy="152"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    sysRegisterInfoPath(sigSend);&#xa;}" ypos="152" code="0" xpos="368" linewidth="1">State_init</state>
+    <timer code="{&#xa;}"/>
+    <block block="//&#xa;#include &quot;Arduino.h&quot;&#xa;&#xa;void arduino_tick()&#xa;{&#xa;&#xa;    static uint32_t pre_timer;&#xa;    static uint32_t cur_timer;&#xa;    uint32_t diff;&#xa;&#xa;    if (pre_timer == 0) {&#xa;        pre_timer = millis();&#xa;        return;&#xa;    }&#xa;&#xa;    cur_timer = millis();&#xa;    diff = abs(cur_timer - pre_timer);&#xa;    if (diff > 0) {&#xa;        sysSetTick(diff);&#xa;    }&#xa;&#xa;    pre_timer = cur_timer;&#xa;}&#xa;&#xa;void setup()&#xa;{&#xa;    arduino_tick();&#xa;    sysInit();&#xa;}&#xa;&#xa;void loop()&#xa;{&#xa;    sysRun();&#xa;    arduino_tick();&#xa;}&#xa;&#xa;static void sigSend(uint8_t* data, uint32_t len);&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+    <user funType="void" code="" funName="sigSend" parametername="data,len" parametertype="uint8_t *,uint32_t"/>
+  </wiretask>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="2" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out1</outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="202" endx="253" xpos="193" endy="202"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    timerStart(cfgTime);&#xa;    pinMode(cfgIO, OUTPUT);&#xa;}" ypos="202" code="0" xpos="293" linewidth="1">stInit</state>
+    <timer code="{&#xa;    LEDstatus = !LEDstatus; //Flip the status for next time this runs and write it&#xa;    digitalWrite(cfgIO, LEDstatus);&#xa;    timerStart(cfgTime);&#xa;}"/>
+    <block block="#include &quot;Arduino.h&quot;&#xa;&#xa;enum CONST_TIME {&#xa;    TIME_3S = 3000,&#xa;    TIME_5S = 5000,&#xa;    TIME_10S = 10000,&#xa;};&#xa;&#xa;static CONST_TIME cfgTime = TIME_5S;&#xa;&#xa;static uint8_t cfgIO = 13;&#xa;&#xa;static boolean LEDstatus = false;&#xa;&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+  </wiretask>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out0</outputnames_moore>
+    <inputnames>evtTimeout</inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="243" endx="395" xpos="335" endy="243"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    initflag = 1;&#xa;    Serial.begin(cfgUartRate);&#xa;    timerStart(100);&#xa;}" ypos="243" code="0" xpos="435" linewidth="1">stateInit</state>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    String command; //Keep track of our command as it comes in&#xa;    String value;&#xa;&#xa;    if (Serial.available() > 0) {&#xa;        command = Serial.readStringUntil(','); //Read all of the command&#xa;        value = Serial.readStringUntil('\n'); //Read all of the value to set&#xa;        Serial.read(); //skip the new line&#xa;&#xa;        if (command == &quot;steer&quot;) { //If we get a steering command then set the steering to it&#xa;            sigSteering(value.toInt());&#xa;        }&#xa;&#xa;        else if (command == &quot;motor&quot;) { //If we get a motor command then set the motor to it&#xa;            sigThrottle(value.toInt());&#xa;        }&#xa;    }&#xa;}" ypos="245" code="1" xpos="672" linewidth="1">stTimeout</state>
+    <transition c1x="529.9990505352605" c2y="228.445846908025" c1y="235.89169381605" description="{&#xa;}" straight="1" type="0" ypos="243.337540724075" endx="640" xpos="474.9985758028907" endy="221" c2x="584.9995252676303">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="577.4770225274232" c2y="258.198896736264" c1y="251.4306780060945" description="{&#xa;}" straight="1" type="0" ypos="244.662459275925" endx="468.428219188051" xpos="632.0014241971094" endy="264.9671154664335" c2x="522.9526208577371">
+      <from>1</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <timer code="{&#xa;    evtTimeout();&#xd;&#xa;&#x9;timerStart(100);&#xa;}"/>
+    <block block="#include &quot;Arduino.h&quot;&#xa;&#xa;enum CONST_UART_RATE {&#xa;    RATE_9600 = 9600,&#xa;    RATE_57600 = 57600,&#xa;};&#xa;&#xa;static enum CONST_UART_RATE cfgUartRate = RATE_57600;&#xa;&#xa;static int initflag = 0;&#xa;&#xa;static void sloSend(uint8_t* data, uint32_t len)&#xa;{&#xa;    if (initflag == 1) {&#xa;&#xa;        Serial.write(data, len);&#xa;    }&#xa;}&#xa;&#xa;static void evtTimeout();&#xa;static void sigSteering(int val);&#xa;static void sigThrottle(int val);&#xa;&#xa;&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+    <provider funType="void" code="static void sloSend(uint8_t* data, uint32_t len)&#xa;{&#xa;    if (initflag == 1) {&#xa;&#xa;        Serial.write(data, len);&#xa;    }&#xa;}" funName="sloSend" parametername="data,len" parametertype="uint8_t *,uint32_t"/>
+    <user funType="void" code="" funName="sigSteering" parametername="val" parametertype="int"/>
+    <user funType="void" code="" funName="sigThrottle" parametername="val" parametertype="int"/>
+  </wiretask>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out0</outputnames_moore>
+    <inputnames>evtTimeout</inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="278.3333333333334" endx="473.3333333333333" xpos="413.3333333333333" endy="278.3333333333334"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    pinMode(inMotor, INPUT);&#xa;    throttle.attach(motorPin);&#xd;&#xa;&#x9;timerStart(10);&#xa;}" ypos="278.3333333333334" code="0" xpos="513.3333333333333" linewidth="1">stateInit</state>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    if (Running) {&#xa;        int rxMotorRaw = pulseIn(inMotor, HIGH, 20000);&#xa;        int rxMotor = map(rxMotorRaw, 1000, 2000, 40, 150); // Read the motor output on R/C receiver&#xa;        throttle.write(rxMotor); //Set the motor and steering values&#xa;    }&#xa;}" ypos="282.5" code="1" xpos="714.1666666666667" linewidth="1">motorRun</state>
+    <transition c1x="593.6826132174934" c2y="278.5214942893937" c1y="278.842262297991" description="{&#xa;    &#xa;}" straight="1" type="0" ypos="279.1630303065883" endx="674.3983847640328" xpos="553.3247274442238" endy="278.2007262807964" c2x="634.0404989907631">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="635.9077304441878" c2y="296.3047623144002" c1y="298.7173098138525" description="{&#xa;    &#xa;}" straight="1" type="0" ypos="301.1298573133049" endx="550.1833157897887" xpos="678.7699377713874" endy="293.8922148149478" c2x="593.0455231169883">
+      <from>1</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <timer code="{&#xd;&#xa;&#x9;evtTimeout();&#xd;&#xa;&#x9;timerStart(10);&#xa;}"/>
+    <block block="#include &quot;Arduino.h&quot;&#xa;#include &quot;Servo.h&quot;&#xa;Servo throttle;&#xa;static const int motorPin = 6; // Pin that outputs the PWM signal to the motor controller&#xa;static const int inMotor = 3; // Pin connected to motor output on R/C receiver&#xa;static bool Running = false;&#xd;&#xa;&#xd;&#xa;static void evtTimeout();&#xd;&#xa;&#xa;static void sloStop()&#xa;{&#xa;    throttle.write(90);&#xa;}&#xa;&#xa;static void sloMotoRun(bool val)&#xa;{&#xa;    Running = val;&#xa;}&#xa;&#xa;static void slotWrite(int val)&#xd;&#xa;{&#xd;&#xa;&#x9;if(!Running){&#xd;&#xa;&#x9;&#x9;throttle.write(val);&#xd;&#xa;&#x9;}&#xd;&#xa;}&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+    <provider funType="void" code="static void sloStop()&#xa;{&#xa;    throttle.write(90);&#xa;}" funName="sloStop" parametername="" parametertype=""/>
+    <provider funType="void" code="static void sloMotoRun(bool val)&#xa;{&#xa;    Running = val;&#xa;}" funName="sloMotoRun" parametername="val" parametertype="bool"/>
+    <provider funType="void" code="static void slotWrite(int val)&#xd;&#xa;{&#xd;&#xa;&#x9;if(!Running){&#xd;&#xa;&#x9;&#x9;throttle.write(val);&#xd;&#xa;&#x9;}&#xd;&#xa;}" funName="slotWrite" parametername="val" parametertype="int"/>
+  </wiretask>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out0</outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="200" endx="403" xpos="343" endy="200"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    if (cfgBattaryCheck) {&#xa;        pinMode(cfgVoltagePin, INPUT);&#xa;        timerStart(cfgTime);&#xa;    }&#xa;}" ypos="200" code="0" xpos="443" linewidth="1">stateInit</state>
+    <timer code="{&#xa;    float voltage;&#xa;    char buf[30];&#xa;    uint8_t len;&#xa;    voltage = map(analogRead(cfgVoltagePin), 0, 1023, 0, 480); //Read and map it&#xa;    voltage = voltage / 100; //Scale it&#xa;    timerStart(cfgTime);&#xa;    memcpy(buf, &quot;voltage&quot;, 7);&#xa;    sprintf(buf + 7, &quot;%3f&quot;, voltage);&#xa;    len = strlen(buf);&#xa;    sigSend((uint8_t*)buf, len);&#xa;}"/>
+    <block block="#include &quot;Arduino.h&quot;&#xa;#include &quot;stdio.h&quot;&#xa;#include &quot;string.h&quot;&#xa;&#xa;enum CONST_TIME {&#xa;    TIME_3S = 3000,&#xa;    TIME_5S = 5000,&#xa;    TIME_10S = 10000,&#xa;};&#xa;&#xa;static CONST_TIME cfgTime = TIME_5S;&#xa;&#xa;enum CONST_AD_PIN {&#xa;    AD_A0 = A0,&#xa;    AD_A1 = A1,&#xa;    AD_A2 = A2,&#xa;    AD_A3 = A3,&#xa;    AD_A4 = A4,&#xa;    AD_A5 = A5,&#xa;};&#xa;&#xa;static CONST_AD_PIN cfgVoltagePin = AD_A3;&#xa;&#xa;enum CONST_VOLT_STATUS {&#xa;    AdcDisable = 0,&#xa;    AdcEnable = 1,&#xa;};&#xa;&#xa;static CONST_VOLT_STATUS cfgBattaryCheck = AdcEnable;&#xa;&#xa;static void sigSend(uint8_t* data, uint32_t len);&#xa;&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+    <user funType="void" code="" funName="sigSend" parametername="data,len" parametertype="uint8_t *,uint32_t"/>
+  </wiretask>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out0</outputnames_moore>
+    <inputnames>evtTimeout</inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="186" endx="483" xpos="423" endy="186"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    pinMode(cfgModePin, OUTPUT);&#xa;    timerStart(cfgTime);&#xa;}" ypos="186" code="0" xpos="523" linewidth="1">stateInit</state>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;&#xa;    rxMode = pulseIn(cfgModePin, HIGH, 20000); // Read the mode output on R/C receiver&#xa;    if (rxMode > killThreshold) { //If we hit the I done goofed switch zero motor/steering&#xa;        sigStraightAndStop();&#xa;        sigSend((uint8_t*)&quot;error&quot;, 5); //&#xa;    } else if ((rxMode &lt; modeThreshold) &amp;&amp; (rxMode > 900)) { //Manual mode&#xa;        if (mode == true) { // If we just came from auto control,  zero motor/steering&#xa;            sigStraightAndStop();&#xa;            sigSend((uint8_t*)&quot;Entered manual control mode.&quot;, 28);&#xa;            mode = false; // Now we're in manual mode&#xa;        }&#xa;        sigMotorRun(true);&#xa;    } else { //Autonomous control mode&#xa;        if (mode == false) { // If we just came from manual control&#xa;            sigStraightAndStop(); // Set the motor power to zero and straighten wheels&#xa;            sigSend((uint8_t*)&quot;Entered autonomous control mode.&quot;, 36);&#xa;            sigMotorRun(false);&#xa;        }&#xa;        mode = true; // Now we're in auto mode&#xa;    }&#xa;}" ypos="187" code="1" xpos="762" linewidth="1">stateGet</state>
+    <transition c1x="616.2361474755371" c2y="179.6298647848693" c1y="181.1245737132972" description="{&#xa;}" straight="1" type="0" ypos="182.6192826417252" endx="722.9946857683416" xpos="562.8568783291348" endy="178.1351558564413" c2x="669.6154166219393">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="667.5151473809606" c2y="200.0528101198362" c1y="195.2167637390555" description="{&#xa;}" straight="1" type="0" ypos="190.3807173582748" endx="558.2591988011513" xpos="722.1431216708652" endy="204.8888565006168" c2x="612.887173091056">
+      <from>1</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <timer code="{&#xa;    evtTimeout();&#xa;    timerStart(cfgTime);&#xa;}"/>
+    <block block="#include &quot;Arduino.h&quot;&#xa;enum CONST_MODE_PIN {&#xa;    PIN_D3 = 3,&#xa;    PIN_D4 = 4,&#xa;    PIN_D5 = 5,&#xa;};&#xa;&#xa;static const CONST_MODE_PIN cfgModePin = PIN_D3; // Pin connected to mode output on R/C receiver&#xa;&#xa;enum CONST_TIME {&#xa;    TIME_10MS = 10,&#xa;    TIME_20MS = 20,&#xa;    TIME_50MS = 50,&#xa;};&#xa;&#xa;static CONST_TIME cfgTime = TIME_10MS;&#xa;&#xa;static const int modeThreshold = 1200; //Less than this value will result in manual mode&#xa;static const int killThreshold = 1600; //Between modeThreshold and this will kill outputs&#xa;static const int noSignalThreshold = 500; //&#xa;&#xa;static int rxMode = 0;&#xa;static boolean mode;&#xa;static void evtTimeout();&#xa;static void sigSend(uint8_t* data, uint32_t len);&#xa;static void sigStraightAndStop();&#xa;static void sigMotorRun(bool val);&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+    <user funType="void" code="" funName="sigSend" parametername="data,len" parametertype="uint8_t *,uint32_t"/>
+    <user funType="void" code="" funName="sigStraightAndStop" parametername="" parametertype=""/>
+    <user funType="void" code="" funName="sigMotorRun" parametername="val" parametertype="bool"/>
+  </wiretask>
+  <wiretask nummooreout="1" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="1.0" name="COMPONET" arrowtype="4" numbits="1" statefontweight="50" statefont="Helvetica" numin="0" initOrder="" transfontsize="8" transfontweight="50" type="0" numout="0" initialstate="0" board="arduino">
+    <outputnames_moore>s_out0</outputnames_moore>
+    <inputnames>evtTimeout</inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="278.3333333333334" endx="473.3333333333333" xpos="413.3333333333333" endy="278.3333333333334"/>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    pinMode(inSteer, INPUT);&#xa;    steering.attach(steerPin);&#xa;    timerStart(10);&#xa;}" ypos="278.3333333333334" code="0" xpos="513.3333333333333" linewidth="1">stateInit</state>
+    <state pencolor="0" exit_actions="{&#xa;}" high="0" radius="40" description="" finalstate="0" entry_actions="{&#xa;    if (Running) {&#xa;        int rxSteerRaw = pulseIn(inSteer, HIGH, 20000);&#xa;        int rxSteer = map(rxSteerRaw, 1000, 2000, 40, 150); // Read the motor output on R/C receiver&#xa;        steering.write(rxSteer); //Set the motor and steering values&#xa;    }&#xa;}" ypos="282.5" code="1" xpos="714.1666666666667" linewidth="1">motorRun</state>
+    <transition c1x="593.6826132174934" c2y="278.5214942893937" c1y="278.842262297991" description="{&#xa;}" straight="1" type="0" ypos="279.1630303065883" endx="674.3983847640328" xpos="553.3247274442238" endy="278.2007262807964" c2x="634.0404989907631">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="635.9077304441878" c2y="296.3047623144002" c1y="298.7173098138525" description="{&#xa;}" straight="1" type="0" ypos="301.1298573133049" endx="550.1833157897887" xpos="678.7699377713874" endy="293.8922148149478" c2x="593.0455231169883">
+      <from>1</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">evtTimeout</inputs>
+      <outputs></outputs>
+    </transition>
+    <timer code="{&#xa;    evtTimeout();&#xa;    timerStart(10);&#xa;}"/>
+    <block block="#include &quot;Arduino.h&quot;&#xa;#include &quot;Servo.h&quot;&#xa;Servo steering;&#xa;&#xa;static const int steerPin = 5; // Pin that outputs the PWM signal to the steering servo&#xa;static const int inSteer = 2; // Pin connected to steering output on R/C receiver&#xa;static bool Running = false;&#xa;&#xa;static void evtTimeout();&#xa;&#xa;static void sloStop()&#xa;{&#xa;    steering.write(90);&#xa;}&#xa;&#xa;static void sloMotoRun(bool val)&#xa;{&#xa;    Running = val;&#xa;}&#xa;&#xa;static void slotWrite(int val)&#xa;{&#xa;    if (!Running) {&#xa;        steering.write(val);&#xa;    }&#xa;}&#xa;&#xa;&#xa;"/>
+    <setting setting=""/>
+    <path path=""/>
+    <command command=""/>
+    <table table=""/>
+    <provider funType="void" code="static void sloStop()&#xa;{&#xa;    steering.write(90);&#xa;}" funName="sloStop" parametername="" parametertype=""/>
+    <provider funType="void" code="static void sloMotoRun(bool val)&#xa;{&#xa;    Running = val;&#xa;}" funName="sloMotoRun" parametername="val" parametertype="bool"/>
+    <provider funType="void" code="static void slotWrite(int val)&#xa;{&#xa;    if (!Running) {&#xa;        steering.write(val);&#xa;    }&#xa;}" funName="slotWrite" parametername="val" parametertype="int"/>
+  </wiretask>
+</wirebed>
